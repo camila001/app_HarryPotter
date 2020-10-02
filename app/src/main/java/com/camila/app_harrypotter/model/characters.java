@@ -1,5 +1,7 @@
 package com.camila.app_harrypotter.model;
 
+import java.util.List;
+
 public class characters {
     public String name ;
     public String species ;
@@ -12,7 +14,7 @@ public class characters {
     public String actor;
     public String alive;
     public String image;
-    public String borrar;
+
 
     public characters(){
 
@@ -31,4 +33,5 @@ public class characters {
         this.alive = alive;
         this.image = image;
     }
+
 }
