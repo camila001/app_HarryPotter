@@ -12,6 +12,7 @@ public class characters {
     public String actor;
     public String alive;
     public String image;
+    public String borrar;
 
     public characters(){
 
