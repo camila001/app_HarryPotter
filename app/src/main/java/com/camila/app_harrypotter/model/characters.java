@@ -4,9 +4,9 @@ import java.util.List;
 
 public class characters {
     public String name ;
-    public String species ;
-    public String  gender;
-    public String house ;
+    public String species;
+    public String gender;
+    public String house;
     public String dateOfBirth;
     public String ancestry;
     public String wand;
