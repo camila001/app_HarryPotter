@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
                 }else if (Password.getText().toString().equals("")){
                     Toast.makeText(MainActivity.this, "Ingresa tu contraseña", Toast.LENGTH_SHORT).show();
                 }else if(User.getText().toString().equals("admin") && Password.getText().toString().equals("123")){
-                    Intent intent = new Intent(MainActivity.this, menu.class);
+                    Intent intent = new Intent(MainActivity.this, ActivityCharacter.class);
                     startActivity(intent);
                     finish();
                 }else{

@@ -1,5 +1,8 @@
 package com.camila.app_harrypotter;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
 import android.util.Log;
 
 import com.loopj.android.http.AsyncHttpClient;
@@ -11,9 +14,17 @@ import org.json.JSONObject;
 
 import cz.msebera.android.httpclient.Header;
 
-public class characters_activity {
+public class ActivityCharacter extends AppCompatActivity {
 
-   private static final String URL="http://hp-api.herokuapp.com/api/characters ";
+    private static final String URL="http://hp-api.herokuapp.com/api/characters ";
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_menu);
+
+        processHTTP();
+    }
 
     public void processHTTP(){
         AsyncHttpClient client = new AsyncHttpClient();
@@ -34,17 +45,16 @@ public class characters_activity {
 
     public void processCharacters(String data) {
         try {
-                JSONArray root = new JSONArray(data);
+            JSONArray root = new JSONArray(data);
 
-                JSONObject characters = root.getJSONObject(1);
-                String name = characters.getString("name");
-                String image = characters.getString("image");
+            JSONObject characters = root.getJSONObject(1);
+            String name = characters.getString("name");
+            String image = characters.getString("image");
 
 
         } catch (JSONException e) {
             e.printStackTrace();
         }
     }
-
 
 }
