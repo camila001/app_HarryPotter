@@ -1,16 +1,23 @@
 package com.camila.app_harrypotter;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
 
+import com.camila.app_harrypotter.adapter.AdapterCharacter;
+import com.camila.app_harrypotter.model.Character;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import cz.msebera.android.httpclient.Header;
 
@@ -20,7 +27,7 @@ public class CharacterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_character);
+        setContentView(R.layout.activity_menu);
 
         processHTTP();
     }
@@ -48,6 +55,7 @@ public class CharacterActivity extends AppCompatActivity {
         try {
 
             JSONArray root = new JSONArray(data);
+            List<Character> list = new ArrayList<>();
 
             for (int i = 0; i<root.length();i++) {
                 JSONObject characters = root.getJSONObject(i);
@@ -63,11 +71,18 @@ public class CharacterActivity extends AppCompatActivity {
                 String alive = characters.getString("alive");
                 String image = characters.getString("image");
 
-                Log.d("INFO", "***************************************");
-                Log.d("INFO", name + " " + species + " " + gender + " " + house + " " + dateOfBirth + " " + ancestry + " " + patronus + " " + actor + " " + alive + " " + image);
-                Log.d("INFO", "***************************************");
-
+                Character character = new Character(name, species,gender, house,dateOfBirth,ancestry,patronus,actor,alive,image);
+                list.add(character);
             }
+
+            RecyclerView rc = findViewById(R.id.rc_chara);
+            AdapterCharacter ad = new AdapterCharacter(this, list,R.layout.activity_character);
+            LinearLayoutManager lm = new LinearLayoutManager(this);
+            lm.setOrientation(RecyclerView.VERTICAL);
+
+            rc.setLayoutManager(lm);
+            rc.setAdapter(ad);
+
 
         } catch (JSONException e) {
             e.printStackTrace();

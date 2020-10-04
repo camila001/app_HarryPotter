@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityCharacter">
+    tools:context=".CharacterActivity"
+    android:background="@drawable/map">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rc_chara"
@@ -12,10 +13,4 @@
         android:layout_height="match_parent"
         />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="500dp"
-        android:text="OLASDLKASH"
-        />
 </androidx.constraintlayout.widget.ConstraintLayout>
