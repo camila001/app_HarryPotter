@@ -34,7 +34,6 @@ public class AdapterCharacter extends RecyclerView.Adapter<AdapterCharacter.Char
 
         View view = LayoutInflater.from(parent.getContext()).inflate(activity_character,parent,false);
 
-
         return new CharacterHolder(view);
     }
 
