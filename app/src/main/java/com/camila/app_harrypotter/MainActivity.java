@@ -4,12 +4,24 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import cz.msebera.android.httpclient.Header;
+
 public class MainActivity extends AppCompatActivity {
+
+
 
     EditText User, Password;
     Button Login;
@@ -20,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         User = (EditText) findViewById(R.id.User);
         Password = (EditText) findViewById(R.id.Password);
         Login = (Button) findViewById(R.id.btn_login);
+
         
 
         Login.setOnClickListener(new View.OnClickListener() {
@@ -30,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 }else if (Password.getText().toString().equals("")){
                     Toast.makeText(MainActivity.this, "Ingresa tu contraseña", Toast.LENGTH_SHORT).show();
                 }else if(User.getText().toString().equals("admin") && Password.getText().toString().equals("123")){
-                    Intent intent = new Intent(MainActivity.this, ActivityCharacter.class);
+                    Intent intent = new Intent(MainActivity.this, activity_character.class);
                     startActivity(intent);
                     finish();
                 }else{
