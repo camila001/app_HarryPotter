@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/map"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/harry"
+        android:text="Charaters"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="80dp"/>
+
+    <RelativeLayout
+        android:layout_width="326dp"
+        android:layout_height="454dp"
+        android:layout_centerVertical="true"
+        android:layout_marginHorizontal="50dp">
+
+
+        <ImageView
+            android:id="@+id/charater_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/harry"/>
+
+        <TextView
+            android:id="@+id/charater_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Harry Potter"
+            android:layout_alignParentBottom="true"
+            android:textSize="64dp"
+            android:textColor="#7A7A7A"
+            android:background="#0C0C0C"
+            android:fontFamily="@font/harry"
+            android:textAlignment="center"
+            />
+
+
+
+    </RelativeLayout>
+</RelativeLayout>
