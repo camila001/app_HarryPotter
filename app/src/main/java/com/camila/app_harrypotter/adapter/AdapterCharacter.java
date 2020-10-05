@@ -55,7 +55,7 @@ public class AdapterCharacter extends RecyclerView.Adapter<AdapterCharacter.Char
         holder.ch_gender = character.gender;
         holder.ch_birth = character.dateOfBirth;
         holder.ch_actor = character.actor;
-        //Glide.with(activity).load(character.image).into(holder.ch_image);
+        Glide.with(activity).load(character.image).into(holder.ch_image);
         holder.urlImage = character.image;
     }
 
