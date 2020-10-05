@@ -57,8 +57,13 @@ public class DetailActivity extends AppCompatActivity {
         ch_ancestry.setText(ancestry);
         ch_patronus.setText(patronus);
         ch_actor.setText(actor);
-        ch_alive.setText(alive);
         Glide.with(this).load(img).into(ch_image);
+
+        if (alive.equalsIgnoreCase("true")){
+            ch_alive.setText("Alive");
+        }else{
+            ch_alive.setText("Dead");
+        }
 
         if (house.equalsIgnoreCase("gryffindor")){
             Glide.with(this).load(R.drawable.gryffindor).into(img_house);

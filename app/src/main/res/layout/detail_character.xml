@@ -58,6 +58,7 @@
             />
 
         <RelativeLayout
+            android:id="@+id/info1"
             android:layout_below="@id/ch_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -139,20 +140,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="House:"
-                android:textColor="#fff"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="80dp"
+                android:textColor="#fff"
                 />
             <TextView
                 android:id="@+id/ch_house"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
                 android:text="Gryffindor"
                 android:textColor="#fff"
                 android:textSize="40dp"
                 android:fontFamily="@font/harry"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="5dp"
                 android:layout_below="@id/txt_house"
                 />
 
@@ -161,22 +160,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/ch_house"
+                android:layout_alignParentRight="true"
                 android:text="Patronus:"
                 android:textColor="#fff"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="62dp"
                 android:layout_marginTop="10dp"
                 />
             <TextView
                 android:id="@+id/ch_patronus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
                 android:text="Stag"
                 android:textColor="#fff"
                 android:textSize="40dp"
                 android:fontFamily="@font/harry"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="70dp"
                 android:layout_below="@id/txt_patronus"
                 />
 
@@ -184,11 +181,10 @@
                 android:id="@+id/txt_birth"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
                 android:layout_below="@id/ch_patronus"
                 android:text="Day of Birth:"
                 android:textColor="#fff"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="50dp"
                 android:layout_marginTop="10dp"
                 />
             <TextView
@@ -196,10 +192,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="31-07-1980"
+                android:layout_alignParentRight="true"
                 android:textColor="#fff"
                 android:textSize="30dp"
                 android:fontFamily="@font/harry"
-                android:layout_alignParentRight="true"
                 android:layout_below="@id/txt_birth"
                 />
 
@@ -217,11 +213,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Daniel Radcliffe"
+                android:layout_centerHorizontal="true"
                 android:textColor="#fff"
                 android:textSize="40dp"
                 android:fontFamily="@font/harry"
                 android:layout_below="@id/txt_actor"
-                android:layout_centerHorizontal="true"
                 />
 
         </RelativeLayout>

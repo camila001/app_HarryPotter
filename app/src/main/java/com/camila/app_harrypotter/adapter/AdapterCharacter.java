@@ -47,15 +47,15 @@ public class AdapterCharacter extends RecyclerView.Adapter<AdapterCharacter.Char
         Character character = list.get(position);
         holder.character_name.setText(character.name);
         Glide.with(activity).load(character.image).into(holder.character_img);
-        holder.ch_alive.setText(character.alive);
-        holder.ch_specie.setText(character.species);
-        holder.ch_gender.setText(character.gender);
-        holder.ch_ancestry.setText(character.ancestry);
-        holder.ch_house.setText(character.house);
-        holder.ch_patronus.setText(character.patronus);
-        holder.ch_birth.setText(character.dateOfBirth);
-        holder.ch_actor.setText(character.actor);
-        Glide.with(activity).load(character.image).into(holder.ch_image);
+        holder.ch_alive = character.alive;
+        holder.ch_specie = character.species;
+        holder.ch_patronus = character.patronus;
+        holder.ch_house = character.house;
+        holder.ch_ancestry = character.ancestry;
+        holder.ch_gender = character.gender;
+        holder.ch_birth = character.dateOfBirth;
+        holder.ch_actor = character.actor;
+        //Glide.with(activity).load(character.image).into(holder.ch_image);
         holder.urlImage = character.image;
     }
 
@@ -67,11 +67,11 @@ public class AdapterCharacter extends RecyclerView.Adapter<AdapterCharacter.Char
     public class CharacterHolder extends RecyclerView.ViewHolder{
 
         ImageView character_img;
-        TextView character_name, ch_alive, ch_specie, ch_gender, ch_ancestry, ch_house, ch_patronus, ch_birth, ch_actor;;
+        TextView character_name;
         CircleImageView ch_image;
         RelativeLayout ch_card;
 
-        String urlImage;
+        String urlImage, ch_alive, ch_specie, ch_gender, ch_ancestry, ch_house, ch_patronus, ch_birth, ch_actor;
 
         public CharacterHolder( View itemView) {
             super(itemView);
@@ -85,19 +85,20 @@ public class AdapterCharacter extends RecyclerView.Adapter<AdapterCharacter.Char
                     Intent intent = new Intent(activity, DetailActivity.class);
                     intent.putExtra("NAME", character_name.getText().toString());
                     intent.putExtra("IMAGE", urlImage);
-                    intent.putExtra("ALIVE", ch_alive.getText().toString());
-                    intent.putExtra("SPECIE", ch_specie.getText().toString());
-                    intent.putExtra("GENDER", ch_gender.getText().toString());
-                    intent.putExtra("ANC", ch_ancestry.getText().toString());
-                    intent.putExtra("HOUSE", ch_house.getText().toString());
-                    intent.putExtra("PATRONUS", ch_patronus.getText().toString());
-                    intent.putExtra("BIRTH", ch_birth.getText().toString());
-                    intent.putExtra("ACTOR", ch_actor.getText().toString());
+                    intent.putExtra("ALIVE", ch_alive);
+                    intent.putExtra("SPECIE", ch_specie);
+                    intent.putExtra("GENDER", ch_gender);
+                    intent.putExtra("ANC", ch_ancestry);
+                    intent.putExtra("HOUSE", ch_house);
+                    intent.putExtra("PATRONUS", ch_patronus);
+                    intent.putExtra("BIRTH", ch_birth);
+                    intent.putExtra("ACTOR", ch_actor);
 
                     activity.startActivity(intent);
 
                 }
             });
+
 
         }
     }
