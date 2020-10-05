@@ -59,7 +59,7 @@
 
         <RelativeLayout
             android:id="@+id/info1"
-            android:layout_below="@id/ch_image"
+            android:layout_below="@id/ch_alive"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/char_info"
@@ -85,7 +85,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/txt_specie"
                 android:text="Human"
-                android:textSize="40dp"
+                android:textSize="35dp"
                 android:fontFamily="@font/harry"
                 android:textColor="#fff"
                 android:layout_marginLeft="10dp"
@@ -107,7 +107,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/txt_gender"
                 android:text="Male"
-                android:textSize="40dp"
+                android:textSize="35dp"
                 android:fontFamily="@font/harry"
                 android:textColor="#fff"
                 android:layout_marginLeft="10dp"
@@ -129,7 +129,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/txt_ancestry"
                 android:text="Half-Blood"
-                android:textSize="40dp"
+                android:textSize="35dp"
                 android:fontFamily="@font/harry"
                 android:textColor="#fff"
                 android:layout_marginLeft="10dp"
@@ -150,7 +150,7 @@
                 android:layout_alignParentRight="true"
                 android:text="Gryffindor"
                 android:textColor="#fff"
-                android:textSize="40dp"
+                android:textSize="35dp"
                 android:fontFamily="@font/harry"
                 android:layout_below="@id/txt_house"
                 />
@@ -172,7 +172,7 @@
                 android:layout_alignParentRight="true"
                 android:text="Stag"
                 android:textColor="#fff"
-                android:textSize="40dp"
+                android:textSize="35dp"
                 android:fontFamily="@font/harry"
                 android:layout_below="@id/txt_patronus"
                 />
@@ -194,7 +194,7 @@
                 android:text="31-07-1980"
                 android:layout_alignParentRight="true"
                 android:textColor="#fff"
-                android:textSize="30dp"
+                android:textSize="35dp"
                 android:fontFamily="@font/harry"
                 android:layout_below="@id/txt_birth"
                 />
@@ -215,7 +215,7 @@
                 android:text="Daniel Radcliffe"
                 android:layout_centerHorizontal="true"
                 android:textColor="#fff"
-                android:textSize="40dp"
+                android:textSize="35dp"
                 android:fontFamily="@font/harry"
                 android:layout_below="@id/txt_actor"
                 />

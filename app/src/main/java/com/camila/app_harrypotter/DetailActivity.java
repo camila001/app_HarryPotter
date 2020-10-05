@@ -50,14 +50,35 @@ public class DetailActivity extends AppCompatActivity {
         img_house = findViewById(R.id.img_house);
 
         ch_name.setText(name);
-        ch_specie.setText(specie);
-        ch_gender.setText(gender);
-        ch_house.setText(house);
-        ch_birth.setText(birth);
-        ch_ancestry.setText(ancestry);
-        ch_patronus.setText(patronus);
+        ch_specie.setText(ucF(specie));
+        ch_gender.setText(ucF(gender));
         ch_actor.setText(actor);
+
         Glide.with(this).load(img).into(ch_image);
+
+        if (birth.isEmpty()){
+            ch_birth.setText("Unknown");
+        }else{
+            ch_birth.setText(birth);
+        }
+
+        if (patronus.isEmpty()){
+            ch_patronus.setText("Unknown");
+        }else{
+            ch_patronus.setText(ucF(patronus));
+        }
+
+        if (house.isEmpty()){
+            ch_house.setText("Unknown");
+        }else{
+            ch_house.setText(ucF(house));
+        }
+
+        if (ancestry.isEmpty()){
+            ch_ancestry.setText("Unknown");
+        }else{
+            ch_ancestry.setText(ucF(ancestry));
+        }
 
         if (alive.equalsIgnoreCase("true")){
             ch_alive.setText("Alive");
@@ -77,4 +98,13 @@ public class DetailActivity extends AppCompatActivity {
             Glide.with(this).load(R.drawable.hp).into(img_house);
         }
     }
+
+    public static String ucF(String str){
+        if (str.isEmpty()){
+            return str;
+        }else{
+            return str.substring(0,1).toUpperCase() + str.substring(1);
+        }
+    }
+
 }
