@@ -56,6 +56,17 @@ public class AdapterCharacter extends RecyclerView.Adapter<AdapterCharacter.Char
         holder.ch_birth = character.dateOfBirth;
         holder.ch_actor = character.actor;
         holder.urlImage = character.image;
+        if (character.house.equalsIgnoreCase("gryffindor")){
+            Glide.with(activity).load(R.drawable.g).into(holder.ch_flag);
+        }else if (character.house.equalsIgnoreCase("slytherin")){
+            Glide.with(activity).load(R.drawable.s).into(holder.ch_flag);
+        }else if (character.house.equalsIgnoreCase("hufflepuff")){
+            Glide.with(activity).load(R.drawable.h).into(holder.ch_flag);
+        }else if (character.house.equalsIgnoreCase("ravenclaw")){
+            Glide.with(activity).load(R.drawable.r).into(holder.ch_flag);
+        }else{
+            Glide.with(activity).load(R.drawable.non).into(holder.ch_flag);
+        }
     }
 
     @Override
@@ -66,8 +77,9 @@ public class AdapterCharacter extends RecyclerView.Adapter<AdapterCharacter.Char
     public class CharacterHolder extends RecyclerView.ViewHolder{
 
         TextView character_name;
-        CircleImageView ch_image,character_img;
+        CircleImageView character_img;
         RelativeLayout ch_card;
+        ImageView ch_flag;
 
         String urlImage, ch_alive, ch_specie, ch_gender, ch_ancestry, ch_house, ch_patronus, ch_birth, ch_actor;
 
@@ -76,6 +88,7 @@ public class AdapterCharacter extends RecyclerView.Adapter<AdapterCharacter.Char
             character_img = itemView.findViewById(R.id.charater_img);
             character_name = itemView.findViewById(R.id.charater_name);
             ch_card = itemView.findViewById(R.id.ch_card);
+            ch_flag = itemView.findViewById(R.id.ch_flag);
 
             ch_card.setOnClickListener(new View.OnClickListener() {
                 @Override

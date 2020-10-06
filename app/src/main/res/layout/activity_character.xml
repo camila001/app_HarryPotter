@@ -2,53 +2,50 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:id="@+id/ch_card"
-    android:background="@drawable/minima"
+    android:background="#0B0303"
     >
-
 
     <RelativeLayout
         android:id="@+id/rl_ch"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/character_card2"
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"
         >
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/charater_img"
             android:layout_width="130dp"
-            android:layout_height="500dp"
+            android:layout_height="130dp"
             android:src="@drawable/harry"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="20dp"
             />
 
         <ImageView
-            android:id="@+id/character_house"
+            android:id="@+id/ch_flag"
             android:layout_width="wrap_content"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:src="@drawable/g"
-            android:layout_alignLeft="@id/charater_img"
-            android:paddingLeft="210dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginLeft="280dp"
             />
 
         <TextView
             android:id="@+id/charater_name"
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Harry Potter"
-            android:textSize="32dp"
+            android:textSize="40dp"
             android:textColor="#E4000000"
             android:fontFamily="@font/harry"
-           android:layout_toRightOf="@id/charater_img"
-            android:layout_marginTop="50dp"
+            android:layout_toRightOf="@id/charater_img"
+            android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
             android:shadowColor="#FF0C0C"
-
             />
 
 

@@ -13,15 +13,14 @@
         />
 
     <RelativeLayout
+        android:id="@+id/card1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/character_card"
-        android:layout_centerVertical="true"
         android:layout_marginHorizontal="8dp"
-        android:layout_marginBottom="64dp"
         android:paddingHorizontal="8dp"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
+        android:paddingVertical="16dp"
+        android:layout_marginTop="100dp"
         >
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -29,7 +28,7 @@
             android:layout_width="130dp"
             android:layout_height="130dp"
             android:src="@drawable/harry"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="10dp"
             />
 
         <TextView
@@ -37,29 +36,29 @@
             android:layout_toRightOf="@id/ch_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Harry potter"
+            android:text="Minerva McGonagall"
             android:fontFamily="@font/harry"
-            android:textSize="50sp"
-            android:layout_marginTop="40dp"
-            android:paddingLeft="20dp"
+            android:textSize="45dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
             android:textColor="#000000"
             />
         <TextView
             android:id="@+id/ch_alive"
-            android:layout_below="@id/ch_name"
-            android:layout_toRightOf="@id/ch_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Alive"
-            android:textColor="#3D4B95"
-            android:layout_marginLeft="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:textColor="#1135FF"
             android:fontFamily="@font/harry"
-            android:textSize="35sp"
+            android:textSize="40sp"
             />
+    </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/info1"
-            android:layout_below="@id/ch_alive"
+            android:layout_below="@id/card1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/char_info"
@@ -218,8 +217,9 @@
                 android:textSize="35dp"
                 android:fontFamily="@font/harry"
                 android:layout_below="@id/txt_actor"
+                android:textAlignment="center"
                 />
 
         </RelativeLayout>
-    </RelativeLayout>
+
 </RelativeLayout>

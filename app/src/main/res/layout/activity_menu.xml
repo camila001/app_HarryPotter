@@ -5,7 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CharacterActivity"
-    android:background="@drawable/minima">
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/casas"
+        android:scaleType="centerCrop"
+        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rc_chara"

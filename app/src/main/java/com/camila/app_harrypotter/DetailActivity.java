@@ -2,6 +2,7 @@ package com.camila.app_harrypotter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
@@ -84,6 +85,7 @@ public class DetailActivity extends AppCompatActivity {
             ch_alive.setText("Alive");
         }else{
             ch_alive.setText("Dead");
+            ch_alive.setTextColor(Color.parseColor("#EF1000"));
         }
 
         if (house.equalsIgnoreCase("gryffindor")){
