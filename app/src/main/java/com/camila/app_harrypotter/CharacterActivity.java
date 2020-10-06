@@ -1,12 +1,15 @@
 package com.camila.app_harrypotter;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.camila.app_harrypotter.adapter.AdapterCharacter;
 import com.camila.app_harrypotter.model.Character;
 import com.loopj.android.http.AsyncHttpClient;
@@ -24,12 +27,16 @@ import cz.msebera.android.httpclient.Header;
 public class CharacterActivity extends AppCompatActivity {
     private static final String URL="http://hp-api.herokuapp.com/api/characters";
 
+    String house;
+    TextView character_name;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
         processHTTP();
+
     }
 
 

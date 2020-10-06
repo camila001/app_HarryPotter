@@ -65,9 +65,8 @@ public class AdapterCharacter extends RecyclerView.Adapter<AdapterCharacter.Char
 
     public class CharacterHolder extends RecyclerView.ViewHolder{
 
-        ImageView character_img;
         TextView character_name;
-        CircleImageView ch_image;
+        CircleImageView ch_image,character_img;
         RelativeLayout ch_card;
 
         String urlImage, ch_alive, ch_specie, ch_gender, ch_ancestry, ch_house, ch_patronus, ch_birth, ch_actor;

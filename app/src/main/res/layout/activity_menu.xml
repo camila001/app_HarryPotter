@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CharacterActivity"
-    android:background="@drawable/map">
+    android:background="@drawable/minima">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rc_chara"
