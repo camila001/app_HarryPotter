@@ -1,31 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:id="@+id/ch_card"
+    android:background="@drawable/minima"
     >
 
-        <ImageView
+
+    <RelativeLayout
+        android:id="@+id/rl_ch"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/character_card2"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="100dp"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/charater_img"
-            android:layout_width="400dp"
-            android:layout_height="315dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="100dp"
-            android:src="@drawable/harry"/>
+            android:layout_width="130dp"
+            android:layout_height="500dp"
+            android:src="@drawable/harry"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            />
+
+        <ImageView
+            android:id="@+id/character_house"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:src="@drawable/g"
+            android:layout_alignLeft="@id/charater_img"
+            android:paddingLeft="210dp"
+            android:layout_marginTop="5dp"
+            />
 
         <TextView
             android:id="@+id/charater_name"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="Harry Potter"
-            android:textSize="64dp"
-            android:textColor="#CFBF32"
-            android:background="#0C0C0C"
+            android:textSize="32dp"
+            android:textColor="#E4000000"
             android:fontFamily="@font/harry"
-            android:textAlignment="center"
-            android:layout_below="@id/charater_img"
+           android:layout_toRightOf="@id/charater_img"
+            android:layout_marginTop="50dp"
             android:layout_centerHorizontal="true"
+            android:shadowColor="#FF0C0C"
+
             />
 
+
+
+    </RelativeLayout>
 </RelativeLayout>

@@ -3,6 +3,7 @@ package com.camila.app_harrypotter;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
 
     EditText User, Password;
     Button Login;
+    MediaPlayer mPlayer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
         
 
         Login.setOnClickListener(new View.OnClickListener() {
+
+
+
             @Override
             public void onClick(View view) {
                 if (User.getText().toString().equals("")){
@@ -51,6 +57,14 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-    }
 
+
+            if (mPlayer != null){
+                mPlayer.release();
+            }
+
+        mPlayer = MediaPlayer.create(this,R.raw.cancion);
+        mPlayer.seekTo(2000);
+        mPlayer.start();
+    }
 }
