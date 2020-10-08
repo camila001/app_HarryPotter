@@ -29,7 +29,7 @@
             android:id="@+id/ch_flag"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:src="@drawable/g"
+            android:src="@drawable/gry_house"
             android:layout_marginLeft="280dp"
             />
 

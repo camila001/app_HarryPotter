@@ -58,12 +58,22 @@ public class MainActivity extends AppCompatActivity {
             mPlayer = MediaPlayer.create(this,R.raw.cancion);
             mPlayer.seekTo(2000);
             mPlayer.start();
+
         } else {
             setContentView(R.layout.internet_activity);
         }
 
 
 
+
+    }
+
+    public void onPause(){
+        super.onPause();
+
+        if (mPlayer != null){
+            mPlayer.release();
+        }
     }
 
 

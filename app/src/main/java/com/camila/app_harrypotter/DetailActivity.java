@@ -89,13 +89,13 @@ public class DetailActivity extends AppCompatActivity {
         }
 
         if (house.equalsIgnoreCase("gryffindor")){
-            Glide.with(this).load(R.drawable.gryffindor).into(img_house);
+            Glide.with(this).load(R.drawable.gry_house).into(img_house);
         }else if (house.equalsIgnoreCase("slytherin")){
-            Glide.with(this).load(R.drawable.slytherin).into(img_house);
+            Glide.with(this).load(R.drawable.sly_house).into(img_house);
         }else if (house.equalsIgnoreCase("hufflepuff")){
-            Glide.with(this).load(R.drawable.hufflepuff).into(img_house);
+            Glide.with(this).load(R.drawable.huf_house).into(img_house);
         }else if (house.equalsIgnoreCase("ravenclaw")){
-            Glide.with(this).load(R.drawable.ravenclaw).into(img_house);
+            Glide.with(this).load(R.drawable.rav_house).into(img_house);
         }else {
             Glide.with(this).load(R.drawable.hp).into(img_house);
         }
