@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
@@ -29,6 +30,7 @@ public class CharacterActivity extends AppCompatActivity {
 
     String house;
     TextView character_name;
+    MediaPlayer mPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,23 @@ public class CharacterActivity extends AppCompatActivity {
 
         processHTTP();
 
+
+        if (mPlayer != null){
+            mPlayer.release();
+        }
+
+        mPlayer = MediaPlayer.create(this,R.raw.cancion);
+        mPlayer.seekTo(2000);
+        mPlayer.start();
+
+    }
+
+    public void onPause(){
+        super.onPause();
+
+        if (mPlayer != null){
+            mPlayer.release();
+        }
     }
 
 

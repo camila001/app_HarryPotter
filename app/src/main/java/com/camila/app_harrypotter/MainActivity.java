@@ -19,7 +19,10 @@ public class MainActivity extends AppCompatActivity {
 
     EditText User, Password;
     Button Login;
+
     MediaPlayer mPlayer;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,22 +54,23 @@ public class MainActivity extends AppCompatActivity {
             });
 
 
-            if (mPlayer != null){
-                mPlayer.release();
-            }
-
-            mPlayer = MediaPlayer.create(this,R.raw.cancion);
-            mPlayer.seekTo(2000);
-            mPlayer.start();
 
         } else {
             setContentView(R.layout.internet_activity);
         }
 
+        if (mPlayer != null){
+            mPlayer.release();
+        }
+
+        mPlayer = MediaPlayer.create(this,R.raw.cancion);
+        mPlayer.seekTo(2000);
+        mPlayer.start();
 
 
 
     }
+
 
     public void onPause(){
         super.onPause();
@@ -75,7 +79,6 @@ public class MainActivity extends AppCompatActivity {
             mPlayer.release();
         }
     }
-
 
     public boolean hayinternet(){
         boolean connected = false;
