@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">app_HarryPotter</string>
+    <string name="app_name">Harry Potter</string>
     <string name="txt_name">INGRESE USUARIO</string>
     <string name="txt_password">INGRESE CONTRASEÑA</string>
 </resources>
