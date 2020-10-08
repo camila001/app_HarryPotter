@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.ConnectivityManager;
+import android.net.Network;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -36,35 +39,59 @@ public class MainActivity extends AppCompatActivity {
         Password = (EditText) findViewById(R.id.Password);
         Login = (Button) findViewById(R.id.btn_login);
 
-        
-
-        Login.setOnClickListener(new View.OnClickListener() {
-
+        if (hayinternet()){
+            Login.setOnClickListener(new View.OnClickListener() {
 
 
-            @Override
-            public void onClick(View view) {
-                if (User.getText().toString().equals("")){
-                    Toast.makeText(MainActivity.this, "Ingrese un usuario", Toast.LENGTH_SHORT).show();
-                }else if (Password.getText().toString().equals("")){
-                    Toast.makeText(MainActivity.this, "Ingresa tu contraseña", Toast.LENGTH_SHORT).show();
-                }else if(User.getText().toString().equals("admin") && Password.getText().toString().equals("123")){
-                    Intent intent = new Intent(MainActivity.this, CharacterActivity.class);
-                    startActivity(intent);
-                }else{
-                    Intent intent2 = new Intent(MainActivity.this, MainActivity.class);
-                    startActivity(intent2);
+
+                @Override
+                public void onClick(View view) {
+                    if (User.getText().toString().equals("")){
+                        Toast.makeText(MainActivity.this, "Ingrese un usuario", Toast.LENGTH_SHORT).show();
+                    }else if (Password.getText().toString().equals("")){
+                        Toast.makeText(MainActivity.this, "Ingresa tu contraseña", Toast.LENGTH_SHORT).show();
+                    }else if(User.getText().toString().equals("admin") && Password.getText().toString().equals("123")){
+                        Intent intent = new Intent(MainActivity.this, CharacterActivity.class);
+                        startActivity(intent);
+                    }else{
+                        Intent intent2 = new Intent(MainActivity.this, MainActivity.class);
+                        startActivity(intent2);
+                    }
                 }
-            }
-        });
+            });
 
 
             if (mPlayer != null){
                 mPlayer.release();
             }
 
-        mPlayer = MediaPlayer.create(this,R.raw.cancion);
-        mPlayer.seekTo(2000);
-        mPlayer.start();
+            mPlayer = MediaPlayer.create(this,R.raw.cancion);
+            mPlayer.seekTo(2000);
+            mPlayer.start();
+        } else {
+            setContentView(R.layout.empty_internet_activity);
+        }
+
+
+
+    }
+
+
+    public boolean hayinternet(){
+        boolean connected = false;
+
+        ConnectivityManager connectivityManager;
+        connectivityManager = (ConnectivityManager) this.getSystemService(CONNECTIVITY_SERVICE);
+
+        Network [] networks = connectivityManager.getAllNetworks();
+
+        for (Network network : networks){
+            NetworkInfo info = connectivityManager.getNetworkInfo(network);
+            if (info.isConnected()){
+                connected = true;
+            }
+        }
+
+        return connected;
     }
 }
