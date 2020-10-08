@@ -108,7 +108,9 @@ public class DetailActivity extends AppCompatActivity {
 
         mPlayer = MediaPlayer.create(this,R.raw.cancion);
         mPlayer.seekTo(2000);
+        mPlayer.setLooping(true);
         mPlayer.start();
+
 
     }
 

@@ -71,15 +71,16 @@ public class MainActivity extends AppCompatActivity {
 
         if (mPlayer != null){
             mPlayer.release();
+
         }
 
         mPlayer = MediaPlayer.create(this,R.raw.cancion);
-        mPlayer.seekTo(2000);
+        mPlayer.setLooping(true);
+        mPlayer.seekTo(1000);
         mPlayer.start();
-
-
-
+        mPlayer.setVolume(10,10);
     }
+
 
 
     public void onPause(){
