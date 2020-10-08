@@ -36,7 +36,7 @@
             android:layout_toRightOf="@id/ch_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Minerva McGonagall"
+            android:text="Harry Potter"
             android:fontFamily="@font/harry"
             android:textSize="45dp"
             android:layout_marginLeft="10dp"
