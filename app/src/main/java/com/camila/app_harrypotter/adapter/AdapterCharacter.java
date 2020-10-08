@@ -57,13 +57,13 @@ public class AdapterCharacter extends RecyclerView.Adapter<AdapterCharacter.Char
         holder.ch_actor = character.actor;
         holder.urlImage = character.image;
         if (character.house.equalsIgnoreCase("gryffindor")){
-            Glide.with(activity).load(R.drawable.g).into(holder.ch_flag);
+            Glide.with(activity).load(R.drawable.gry).into(holder.ch_flag);
         }else if (character.house.equalsIgnoreCase("slytherin")){
-            Glide.with(activity).load(R.drawable.s).into(holder.ch_flag);
+            Glide.with(activity).load(R.drawable.sly).into(holder.ch_flag);
         }else if (character.house.equalsIgnoreCase("hufflepuff")){
-            Glide.with(activity).load(R.drawable.h).into(holder.ch_flag);
+            Glide.with(activity).load(R.drawable.huf).into(holder.ch_flag);
         }else if (character.house.equalsIgnoreCase("ravenclaw")){
-            Glide.with(activity).load(R.drawable.r).into(holder.ch_flag);
+            Glide.with(activity).load(R.drawable.rev).into(holder.ch_flag);
         }else{
             Glide.with(activity).load(R.drawable.non).into(holder.ch_flag);
         }
