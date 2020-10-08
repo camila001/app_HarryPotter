@@ -8,20 +8,10 @@ import android.net.ConnectivityManager;
 import android.net.Network;
 import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import com.loopj.android.http.AsyncHttpClient;
-import com.loopj.android.http.AsyncHttpResponseHandler;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import cz.msebera.android.httpclient.Header;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -69,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             mPlayer.seekTo(2000);
             mPlayer.start();
         } else {
-            setContentView(R.layout.empty_internet_activity);
+            setContentView(R.layout.internet_activity);
         }
 
 
