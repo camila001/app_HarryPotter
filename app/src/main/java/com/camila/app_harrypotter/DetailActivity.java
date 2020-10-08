@@ -3,6 +3,7 @@ package com.camila.app_harrypotter;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
@@ -21,6 +22,7 @@ public class DetailActivity extends AppCompatActivity {
     TextView ch_name, ch_alive, ch_specie, ch_gender, ch_ancestry, ch_house, ch_patronus, ch_birth, ch_actor;
     CircleImageView ch_image;
     ImageView img_house;
+    MediaPlayer mPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,6 +100,23 @@ public class DetailActivity extends AppCompatActivity {
             Glide.with(this).load(R.drawable.rav_house).into(img_house);
         }else {
             Glide.with(this).load(R.drawable.hp).into(img_house);
+        }
+
+        if (mPlayer != null){
+            mPlayer.release();
+        }
+
+        mPlayer = MediaPlayer.create(this,R.raw.cancion);
+        mPlayer.seekTo(2000);
+        mPlayer.start();
+
+    }
+
+    public void onPause(){
+        super.onPause();
+
+        if (mPlayer != null){
+            mPlayer.release();
         }
     }
 

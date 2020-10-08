@@ -13,7 +13,7 @@
         android:background="@drawable/character_card2"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="40dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="1dp"
         >
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -49,5 +49,13 @@
 
 
 
+
     </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/pies"
+        android:layout_below="@id/rl_ch"/>
+
 </RelativeLayout>
