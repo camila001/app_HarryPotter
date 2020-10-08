@@ -42,10 +42,11 @@ public class CharacterActivity extends AppCompatActivity {
 
         if (mPlayer != null){
             mPlayer.release();
-        }
+    }
 
         mPlayer = MediaPlayer.create(this,R.raw.cancion);
         mPlayer.seekTo(2000);
+        mPlayer.setLooping(true);
         mPlayer.start();
 
     }
